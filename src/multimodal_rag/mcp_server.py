@@ -1,4 +1,6 @@
 ﻿import os
+from dotenv import load_dotenv
+load_dotenv()
 # /// script
 # requires-python = ">=3.11"
 # dependencies = [
@@ -106,3 +108,4 @@ def search_project_insight_docs(query: str, top_k: int = 5) -> str:
 
 if __name__ == "__main__":
     mcp.run()
+

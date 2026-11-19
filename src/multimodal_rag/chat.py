@@ -1,4 +1,6 @@
 ﻿import os
+from dotenv import load_dotenv
+load_dotenv()
 # /// script
 # requires-python = ">=3.11"
 # dependencies = [
@@ -103,3 +105,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
