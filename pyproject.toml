@@ -14,6 +14,7 @@ dependencies = [
     "faster-whisper>=1.1.0",
     "pydantic>=2.9.0",
     "python-dotenv>=1.0.1",
+    "pandas>=3.1.1",
 ]
 
 [project.optional-dependencies]
@@ -28,3 +29,10 @@ eval = [
 rag-index = "multimodal_rag.indexer:main"
 rag-chat = "multimodal_rag.chat:main"
 rag-mcp = "multimodal_rag.mcp_server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/multimodal_rag"]
