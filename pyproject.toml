@@ -1,0 +1,30 @@
+[project]
+name = "multimodal-doc-rag-mcp"
+version = "0.1.0"
+description = "Local Multimodal RAG pipeline (Markdown, VLM Image Captions, Whisper Transcripts) with LanceDB Hybrid Search, Ragas Evals, and FastMCP Server."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "lancedb>=0.15.0",
+    "fastembed>=0.4.0",
+    "tantivy>=0.22.0",
+    "openai>=1.50.0",
+    "fastmcp>=2.0.0",
+    "playwright>=1.48.0",
+    "faster-whisper>=1.1.0",
+    "pydantic>=2.9.0",
+    "python-dotenv>=1.0.1",
+]
+
+[project.optional-dependencies]
+eval = [
+    "ragas>=0.2.10",
+    "langchain-openai<0.4",
+    "langchain-community<0.4",
+    "pandas>=2.2.0",
+]
+
+[project.scripts]
+rag-index = "multimodal_rag.indexer:main"
+rag-chat = "multimodal_rag.chat:main"
+rag-mcp = "multimodal_rag.mcp_server:main"

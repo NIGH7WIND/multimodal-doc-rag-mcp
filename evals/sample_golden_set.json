@@ -1,0 +1,29 @@
+﻿[
+  {
+    "id": "eval_01",
+    "chunk_id": "01_getting_started_0",
+    "modality": "markdown_text",
+    "expected_path": "/getting-started",
+    "expected_breadcrumb": "Getting Started > Environment Setup",
+    "question": "Which command initializes the local evaluation environment without network access?",
+    "reference_answer": "Run `runner execute --env docker --offline` to validate tasks in an isolated container."
+  },
+  {
+    "id": "eval_02",
+    "chunk_id": "04_architecture_12",
+    "modality": "image_caption",
+    "expected_path": "/architecture/verifier-loop",
+    "expected_breadcrumb": "Architecture > Verifier Isolation Diagram",
+    "question": "According to the architecture diagram, which component enforces the output contract boundary?",
+    "reference_answer": "The isolated verifier container checks output artifacts against the contract boundary and emits a binary reward."
+  },
+  {
+    "id": "eval_03",
+    "chunk_id": "09_walkthrough_videos_05",
+    "modality": "video_transcript",
+    "expected_path": "/videos/walkthrough",
+    "expected_breadcrumb": "Video Walkthrough > Validation Checks",
+    "question": "Which two validation modes must be executed before opening a pull request?",
+    "reference_answer": "Run both the reference oracle mode (expected reward 1.0) and the baseline no-op mode (expected reward 0.0)."
+  }
+]

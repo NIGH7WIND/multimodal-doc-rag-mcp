@@ -1,0 +1,31 @@
+# Python & uv
+__pycache__/
+*.py[cod]
+.venv/
+.uv_cache/
+dist/
+build/
+*.egg-info/
+
+# Local databases, caches & scraped proprietary content
+lancedb_store/
+rag_repository*/
+raw_docs*/
+chrome_profile*/
+*.lance
+*.parquet
+.fastembed_cache/
+
+# Auth cookies, browser profiles & secrets
+.env
+auth.json
+storage_state.json
+playwright_profile/
+cookies*.json
+
+# Full proprietary eval outputs (keep only anonymized sample schema)
+eval_golden_set.json
+eval_report.json
+chrome_profile/
+eval_golden_set.json
+eval_report.json
